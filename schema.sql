@@ -1,6 +1,6 @@
 CREATE TABLE animals (
-id integer,
-name varchar,
+id int NOT NULL IDENTITY(1,1),
+name varchar(200),
 date_of_birth date,
 escape_attempts integer,
 neutered boolean,
