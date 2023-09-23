@@ -54,7 +54,7 @@ SAVEPOINT weight_update;
 UPDATE animals SET weight_kg = weight_kg * -1;
 SELECT * FROM animals;
 ROLLBACK TO weight_update;
-UPDATE animals SET weight_kg = weight_kg * -1;
+UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
 SELECT * FROM animals;
 
 -- Commit the transaction
